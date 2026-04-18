@@ -1,0 +1,13 @@
+{
+  "name": "what-a-connection",
+  "version": "1.0.0",
+  "description": "Agent system that researches prospects via social media and recommends conversation-sparking gifts.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
