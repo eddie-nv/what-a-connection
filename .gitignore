@@ -8,4 +8,6 @@ dist/
 build/
 .claude/settings.local.json
 *.sqlite
+*.sqlite-shm
+*.sqlite-wal
 *.db

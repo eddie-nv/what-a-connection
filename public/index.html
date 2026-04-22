@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>What A Connection</title>
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+<main>
+  <header>
+    <h1>What A Connection</h1>
+    <p class="tag">Research a prospect, get 3 conversation-sparking gifts + a tone-matched outreach note.</p>
+  </header>
+
+  <section id="form-section">
+    <form id="research-form">
+      <label>
+        Prospect profile URL
+        <input type="url" name="prospectUrl" required placeholder="https://twitter.com/paulg" />
+      </label>
+      <label>
+        Prospect name <span class="optional">(optional — improves Google enrichment)</span>
+        <input type="text" name="prospectName" placeholder="Paul Graham" />
+      </label>
+      <div class="row">
+        <label>
+          Your name
+          <input type="text" name="senderName" required placeholder="Ann Researcher" />
+        </label>
+        <label>
+          Your role <span class="optional">(optional)</span>
+          <input type="text" name="senderRole" placeholder="Founder" />
+        </label>
+        <label>
+          Your company <span class="optional">(optional)</span>
+          <input type="text" name="senderCompany" placeholder="Acme AI" />
+        </label>
+      </div>
+      <label>
+        Why do you want to connect?
+        <textarea name="reasonForConnecting" required rows="2" placeholder="Exploring a collaboration between our portfolio companies"></textarea>
+      </label>
+      <label>
+        What do you hope to discuss?
+        <textarea name="discussionTopic" required rows="2" placeholder="15-minute call about LLM evaluation tooling"></textarea>
+      </label>
+      <label class="inline">
+        <input type="checkbox" name="forceRefresh" />
+        Force refresh (bypass cache)
+      </label>
+      <button type="submit" id="submit-btn">Research</button>
+    </form>
+  </section>
+
+  <section id="progress-section" hidden>
+    <h2>Pipeline progress</h2>
+    <ul id="progress-log"></ul>
+  </section>
+
+  <section id="results-section" hidden>
+    <div class="card" id="profile-card">
+      <h2>Profile</h2>
+      <div id="profile-body"></div>
+    </div>
+
+    <div class="card" id="gifts-card">
+      <h2>Gift recommendations</h2>
+      <div id="gifts-body"></div>
+    </div>
+
+    <div class="card" id="outreach-card">
+      <h2>Outreach draft</h2>
+      <div id="outreach-body"></div>
+      <button type="button" id="copy-outreach">Copy to clipboard</button>
+    </div>
+
+    <button type="button" id="reset-btn">Start new research</button>
+  </section>
+
+  <section id="error-section" hidden>
+    <div class="card error">
+      <h2>Error</h2>
+      <pre id="error-body"></pre>
+    </div>
+  </section>
+</main>
+<script src="/app.js"></script>
+</body>
+</html>
